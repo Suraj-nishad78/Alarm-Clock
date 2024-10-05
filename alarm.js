@@ -150,13 +150,25 @@ let hours = document.getElementById('hours')
         // variable for audio of alarm & image of alarm
         let audio = document.getElementById('myAudio')
         let alarmImage = document.getElementById('alarm-image')
+        let alarmSnoozeStop = document.getElementById('alarm-snooze-stop')
 
         // creating a function when alarm time match with current time then alarm tone will play & image of alarm shown
         function playSong(){
             alarmImage.style.display = 'block'
+            alarmSnoozeStop.style.display = 'block'
             audio.play()
             setTimeout(()=>{
                 alarmImage.style.display = 'none'
+                alarmSnoozeStop.style.display = 'none'
                 audio.pause()
             },7000)
         }
+
+        let snoozeAlarm = document.getElementById('snooze-alarm')
+        let stopAlarm = document.getElementById('stop-alarm')
+
+        stopAlarm.addEventListener('click',()=>{
+            alarmImage.style.display = 'none'
+            alarmSnoozeStop.style.display = 'none'
+            audio.pause()
+        })

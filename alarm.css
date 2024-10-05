@@ -119,18 +119,44 @@ h1 u:hover{
     color: white;
     transition: all .8s;
 }
+#alarm-snooze-stop{
+    position: absolute;
+    top: 27%;
+    left: 30%;
+    /* width: 370px; */
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+#alarm-snooze-stop button{
+    margin: 0px 110px;
+    padding: 5px;
+    background-color: aqua;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: lightslategrey;
+}
+#alarm-snooze-stop button:hover{
+    cursor: pointer;
+    background:rgba(0, 0, 128, 0.5);
+    color: white;
+    transition: all .8s;
+}
+
 #alarm-image{
     position: absolute;
-    top: 80px;
-    left: 42%;
+    top: 50px;
+    left: 43%;
     font-size: 8em;
     width: 200px;
     height: 200px;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     display: none;
     transform: scale(0);
     animation: alarm 1.2s infinite;
 }
+
   @keyframes alarm {
     0%{
         transform: scale(0);
