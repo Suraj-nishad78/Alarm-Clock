@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaram Clock</title>
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Clock-512.png">
+    <link rel="stylesheet" href="alarm.css">
+</head>
+<body>
+    <header>
+        <!-- title time -->
+        <p id="title"><u>Time</u></p>
+
+        <!-- digital watch -->
+        <div id="led-watch">
+            <div id="hour">
+                <span id="hours"></span>
+                <p>Hours</p>
+            </div>
+            <div id="min">
+                <span id="minutes"></span>
+                <p>Minutes</p>
+            </div>
+            <div id="sec">
+                <span id="seconds"></span>
+                <p>Seconds</p>
+            </div>
+        </div>
+        <!-- set alarm heading -->
+        <h1><u>Set Alarm</u></h1>
+
+        <div id="point">
+
+            <!-- set alarm div  -->
+            <div id="set-alarm">
+                <div class="alarm">
+                    <select name="a-hours" id="a-hours"></select>
+                    <p>Hours</p>
+                </div>
+                <div class="alarm">
+                    <select name="a-minutes" id="a-minutes"></select>
+                    <p>Minutes</p>
+                </div>
+                <div class="alarm">
+                    <select name="a-seconds" id="a-seconds"></select>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <!-- button for add alarm -->
+            <button type="button" id="set">Set Alarm</button>
+        </div>
+        <!-- ul tag for added  alarm list item  -->
+        <ul id="alarm-timer">
+        </ul>
+    </header>
+    <!-- audio for alarm tone -->
+    <audio id="myAudio" src="minions_wake_up.mp3" preload="auto"></audio>
+
+    <!-- span for alarm image -->
+    <span id="alarm-image">⏰</span>
+
+    <!-- Script for js codes -->
+    <script src="alarm.js"></script>
+</body>
+</html>
