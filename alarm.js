@@ -172,3 +172,48 @@ let hours = document.getElementById('hours')
             alarmSnoozeStop.style.display = 'none'
             audio.pause()
         })
+
+
+// Function for snoozing the alarm
+snoozeAlarm.addEventListener('click', () => {
+    // Hide the alarm image and stop the audio
+    alarmImage.style.display = 'none';
+    alarmSnoozeStop.style.display = 'none';
+    audio.pause();
+
+    // Get the current time and add 5 minutes
+    let current = new Date();
+    current.setMinutes(current.getMinutes() + 5); // Adding 5 minutes
+
+    // Get hours, minutes, and seconds for the snooze time
+    let snoozeHours = `${current.getHours() < 10 ? '0' + current.getHours() : current.getHours()}`;
+    let snoozeMinutes = `${current.getMinutes() < 10 ? '0' + current.getMinutes() : current.getMinutes()}`;
+    let snoozeSeconds = `${current.getSeconds() < 10 ? '0' + current.getSeconds() : current.getSeconds()}`;
+
+    // Add the snoozed alarm to the list
+    let li = document.createElement('li');
+    li.textContent = `${snoozeHours}:${snoozeMinutes}:${snoozeSeconds}`;
+
+    let span = document.createElement('span');
+    span.textContent = '❎';
+
+    // Add event listener for removing the snoozed alarm
+    span.addEventListener('click', () => {
+        alarmList.removeChild(li);
+        alarmList.removeChild(span);
+    });
+
+    alarmList.append(li, span);
+
+    // Automatically remove the alarm after it rings
+    setTimeout(() => {
+        alarmList.removeChild(li);
+        alarmList.removeChild(span);
+    }, 300000); // 5 minutes = 300000 milliseconds
+
+    // Alert the user that the alarm is snoozed for 5 minutes
+    alert('The alarm will ring again after 5 minutes.');
+
+    // Reset the values in the time picker
+    resetSelectedTagValue();
+});

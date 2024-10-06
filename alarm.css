@@ -205,3 +205,62 @@ h1 u:hover{
 #title u:hover{
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    #led-watch {
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+
+    #hour, #min, #sec {
+        width: 60px;
+        height: 50px;
+        /* margin: 5px; */
+    }
+
+    #set {
+        width: 65%;
+        left: 17%;
+        font-size: 18px;
+    }
+
+    #alarm-timer {
+        /* grid-template-columns: 100%; */
+        padding: 0 20px;
+    }
+
+    #alarm-timer li {
+        font-size: 18px;
+        width: 55%;
+        left: 14%;
+        padding: 5px;
+    }
+
+    #alarm-image {
+        top: 90px;
+        left: 41%;
+        font-size: 5em;
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    header {
+        width: 60%;
+        margin: 10px auto;
+    }
+    #alarm-snooze-stop{
+        top: 29%;
+        left: 1%;
+    }
+    #alarm-snooze-stop button{
+        margin: 0px 120px;
+    }   
+    #set-alarm {
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+}
