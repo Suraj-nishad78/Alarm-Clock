@@ -207,20 +207,24 @@ h1 u:hover{
 }
 
 @media (max-width: 600px) {
-    #led-watch {
-        /* flex-direction: column; */
-        /* align-items: center; */
+    #led-watch span{
+        font-size: 17px;
+        font-weight: bold;
+    }
+    #led-watch p{
+        font-size: 13px;
     }
 
     #hour, #min, #sec {
         width: 60px;
-        height: 50px;
-        /* margin: 5px; */
+        height: 40px;
+        /* padding: 5px; */
+        margin: 5px;
     }
 
     #set {
-        width: 65%;
-        left: 17%;
+        width: 90%;
+        left: 5%;
         font-size: 18px;
     }
 
@@ -231,17 +235,32 @@ h1 u:hover{
 
     #alarm-timer li {
         font-size: 18px;
-        width: 55%;
-        left: 14%;
+        width: 45%;
+        left: -2%;
         padding: 5px;
     }
-
+    #alarm-timer span{
+        position: absolute;
+        left: 80%;
+        font-size: 20px;
+    }
     #alarm-image {
-        top: 90px;
-        left: 41%;
+        top: 60px;
+        left: 34%;
         font-size: 5em;
         width: 150px;
         height: 150px;
+    }
+    .alarm {
+        width: 55px;
+        height: 45px;
+    }
+    .alarm select {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .alarm p {
+        font-size: 15px;
     }
 
     h1 {
@@ -249,18 +268,14 @@ h1 u:hover{
     }
 
     header {
-        width: 60%;
+        width: 75%;
         margin: 10px auto;
     }
     #alarm-snooze-stop{
-        top: 29%;
-        left: 1%;
+        top: 25%;
+        left: -1%;
     }
     #alarm-snooze-stop button{
-        margin: 0px 120px;
-    }   
-    #set-alarm {
-        /* flex-direction: column; */
-        /* align-items: center; */
+        margin: 0px 50px;
     }
 }
