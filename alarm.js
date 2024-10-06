@@ -161,7 +161,7 @@ let hours = document.getElementById('hours')
                 alarmImage.style.display = 'none'
                 alarmSnoozeStop.style.display = 'none'
                 audio.pause()
-            },7000)
+            },60*1000)
         }
 
         let snoozeAlarm = document.getElementById('snooze-alarm')
